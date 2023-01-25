@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         radioButton();
         ratingBar();
         seekBar();
+        datePicker();
+        timePicker();
     }
 
     private void androidButton() {
@@ -79,6 +81,20 @@ public class MainActivity extends AppCompatActivity {
     private void seekBar() {
         binding.seekBarBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, SeekBarActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void datePicker() {
+        binding.datePickerBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, DatePickerActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void timePicker() {
+        binding.timePickerBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, TimePickerActivity.class);
             startActivity(intent);
         });
     }
