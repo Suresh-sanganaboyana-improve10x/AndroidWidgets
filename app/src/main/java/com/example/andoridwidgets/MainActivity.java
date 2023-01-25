@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         datePicker();
         timePicker();
         verticalScrollView();
+        horizontalScrollView();
+
     }
 
     private void androidButton() {
@@ -103,6 +105,13 @@ public class MainActivity extends AppCompatActivity {
     private void verticalScrollView() {
         binding.verticalSrollBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, VerticalScrollViewActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void horizontalScrollView() {
+        binding.horizontalScrollBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, HorizontalScrollViewActivity.class);
             startActivity(intent);
         });
     }

@@ -115,4 +115,14 @@
         app:layout_constraintEnd_toEndOf="@+id/time_picker_btn"
         app:layout_constraintStart_toStartOf="@+id/time_picker_btn"
         app:layout_constraintTop_toBottomOf="@+id/time_picker_btn" />
+
+    <Button
+        android:id="@+id/horizontal_scroll_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HorizontalScrollView"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/vertical_sroll_btn"
+        app:layout_constraintStart_toStartOf="@+id/vertical_sroll_btn"
+        app:layout_constraintTop_toBottomOf="@+id/vertical_sroll_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
