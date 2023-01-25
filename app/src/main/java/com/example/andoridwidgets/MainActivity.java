@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         toggleButton();
         checkBox();
         alertBox();
+        radioButton();
     }
 
     private void androidButton() {
@@ -55,6 +56,13 @@ public class MainActivity extends AppCompatActivity {
     private void alertBox() {
         binding.alertDialogBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, AlertDialogActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void radioButton() {
+        binding.radioBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, RadioButtonActivity.class);
             startActivity(intent);
         });
     }

@@ -54,4 +54,14 @@
         app:layout_constraintEnd_toEndOf="@+id/check_box_btn"
         app:layout_constraintStart_toStartOf="@+id/check_box_btn"
         app:layout_constraintTop_toBottomOf="@+id/check_box_btn" />
+
+    <Button
+        android:id="@+id/radio_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RadioButton"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/alert_dialog_btn"
+        app:layout_constraintStart_toStartOf="@+id/alert_dialog_btn"
+        app:layout_constraintTop_toBottomOf="@+id/alert_dialog_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
