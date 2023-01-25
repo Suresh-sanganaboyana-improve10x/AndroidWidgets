@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         seekBar();
         datePicker();
         timePicker();
+        verticalScrollView();
     }
 
     private void androidButton() {
@@ -95,6 +96,13 @@ public class MainActivity extends AppCompatActivity {
     private void timePicker() {
         binding.timePickerBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, TimePickerActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void verticalScrollView() {
+        binding.verticalSrollBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, VerticalScrollViewActivity.class);
             startActivity(intent);
         });
     }
