@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/android_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AndroidButton"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/custom_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custom Toast"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/android_button"
+        app:layout_constraintStart_toStartOf="@+id/android_button"
+        app:layout_constraintTop_toBottomOf="@+id/android_button" />
+
+    <Button
+        android:id="@+id/toggle_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toggle Button"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/custom_btn"
+        app:layout_constraintStart_toStartOf="@+id/custom_btn"
+        app:layout_constraintTop_toBottomOf="@+id/custom_btn" />
+
+    <Button
+        android:id="@+id/check_box_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckBox"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/toggle_btn"
+        app:layout_constraintStart_toStartOf="@+id/toggle_btn"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_btn" />
+
+    <Button
+        android:id="@+id/alert_dialog_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AlertDialog"
+        app:layout_constraintEnd_toEndOf="@+id/check_box_btn"
+        app:layout_constraintStart_toStartOf="@+id/check_box_btn"
+        app:layout_constraintTop_toBottomOf="@+id/check_box_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
