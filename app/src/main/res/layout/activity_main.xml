@@ -51,6 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="AlertDialog"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="@+id/check_box_btn"
         app:layout_constraintStart_toStartOf="@+id/check_box_btn"
         app:layout_constraintTop_toBottomOf="@+id/check_box_btn" />
@@ -74,4 +75,14 @@
         app:layout_constraintEnd_toEndOf="@+id/radio_btn"
         app:layout_constraintStart_toStartOf="@+id/radio_btn"
         app:layout_constraintTop_toBottomOf="@+id/radio_btn" />
+
+    <Button
+        android:id="@+id/seek_bar_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SeekBar"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/rating_bar_btn"
+        app:layout_constraintStart_toStartOf="@+id/rating_bar_btn"
+        app:layout_constraintTop_toBottomOf="@+id/rating_bar_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
