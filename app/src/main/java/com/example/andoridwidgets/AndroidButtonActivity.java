@@ -7,30 +7,36 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.andoridwidgets.databinding.ActivityAndroidButtonBinding;
+
 public class AndroidButtonActivity extends AppCompatActivity {
 
-    private EditText numberOneTxt;
-    private EditText numberTwoTxt;
-    private Button addButton;
+    private ActivityAndroidButtonBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_android_button);
+        binding = ActivityAndroidButtonBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         addTwoNumbers();
     }
 
     public void addTwoNumbers() {
-        numberOneTxt = findViewById(R.id.number_one_txt);
-        numberTwoTxt = findViewById(R.id.number_two_txt);
-        addButton = findViewById(R.id.add_btn);
-        addButton.setOnClickListener(v -> {
-            String value1 = numberOneTxt.getText().toString();
-            String value2 = numberTwoTxt.getText().toString();
-            int a = Integer.parseInt(value1);
-            int b = Integer.parseInt(value2);
-            int sum = a+b;
+        binding.addBtn.setOnClickListener(v -> {
+            //read a and b
+            String value1 = binding.numberOneTxt.getText().toString();
+            String value2 =binding.numberTwoTxt.getText().toString();
+            // convert to it int
+            String sum = add(value1, value2);
             Toast.makeText(this, String.valueOf(sum), Toast.LENGTH_SHORT).show();
         });
+    }
+
+    //Business Logic - Only main operation.Strictly no ui changes
+    private String add(String value1, String value2) {
+        int num1 = Integer.parseInt(value1);
+        int num2 = Integer.parseInt(value2);
+        int sum = num1 + num2;
+        return String.valueOf(sum);
     }
 }

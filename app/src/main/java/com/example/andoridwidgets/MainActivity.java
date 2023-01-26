@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         verticalScrollView();
         horizontalScrollView();
         listView();
+        customListView();
 
     }
 
@@ -120,6 +121,13 @@ public class MainActivity extends AppCompatActivity {
     private void listView() {
         binding.listViewBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, ListViewActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void customListView() {
+        binding.customLvBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, CustomListViewActivity.class);
             startActivity(intent);
         });
     }
