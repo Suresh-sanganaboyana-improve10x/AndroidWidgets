@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         timePicker();
         verticalScrollView();
         horizontalScrollView();
+        listView();
 
     }
 
@@ -112,6 +113,13 @@ public class MainActivity extends AppCompatActivity {
     private void horizontalScrollView() {
         binding.horizontalScrollBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, HorizontalScrollViewActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void listView() {
+        binding.listViewBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ListViewActivity.class);
             startActivity(intent);
         });
     }
