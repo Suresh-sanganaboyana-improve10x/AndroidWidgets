@@ -21,17 +21,32 @@ public class CheckBoxActivity extends AppCompatActivity {
 
     private void orderPage() {
         binding.orderBtn.setOnClickListener(v -> {
-            int totalAmount = 0;
-            if (binding.pizzaCb.isChecked()) {
-                totalAmount += 500;
-            }
-            if (binding.coffeeCb.isChecked()) {
-                totalAmount += 50;
-            }
-            if (binding.burgerCb.isChecked()) {
-                totalAmount += 200;
-            }
-            Toast.makeText(this, String.valueOf(totalAmount), Toast.LENGTH_SHORT).show();
+            boolean isPizzaChecked = binding.pizzaCb.isChecked();
+            boolean isCoffeeChecked = binding.coffeeCb.isChecked();
+            boolean isBurgerChecked = binding.burgerCb.isChecked();
+            String orderDetails = createOrder(isPizzaChecked, isCoffeeChecked, isBurgerChecked);
+            binding.orderDetailsTxt.setText(orderDetails);
+//            Toast.makeText(this, orderDetails, Toast.LENGTH_LONG).show();
         });
+    }
+
+    private String createOrder(boolean pizza, boolean coffee, boolean burger) {
+        int totalamount = 0;
+        String orderDetails = "Selected Items";
+        if (pizza) {
+            totalamount += 100;
+            orderDetails += "\npizza: Rs.100";
+        }
+        if (coffee) {
+            totalamount += 50;
+            orderDetails += "\ncoffee: Rs.50";
+        }
+        if (burger) {
+            totalamount += 200;
+            orderDetails += "\nburger: Rs.200";
+        }
+
+        orderDetails+="Total Rs" +totalamount;
+        return orderDetails;
     }
 }
