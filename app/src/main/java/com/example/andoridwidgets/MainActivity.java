@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         customListView();
         imageSwitcher();
         imageSlider();
+        progressDialog();
     }
 
     private void androidButton() {
@@ -143,6 +144,13 @@ public class MainActivity extends AppCompatActivity {
     private void imageSlider() {
         binding.sliderBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, ImageSliderActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void progressDialog() {
+        binding.progressDialogBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ProgressDialogActivity.class);
             startActivity(intent);
         });
     }
