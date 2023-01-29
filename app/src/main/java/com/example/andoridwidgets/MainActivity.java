@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         webView();
         spinner();
         customAlertDialog();
+        searchView();
     }
 
     private void androidButton() {
@@ -175,6 +176,13 @@ public class MainActivity extends AppCompatActivity {
     private void customAlertDialog() {
         binding.customAlertDialogBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, CustomAlertDialogBoxActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void searchView() {
+        binding.searchViewBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, SearchViewActivity.class);
             startActivity(intent);
         });
     }
