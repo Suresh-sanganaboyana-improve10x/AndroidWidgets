@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         imageSwitcher();
         imageSlider();
         progressDialog();
+        webView();
+        spinner();
     }
 
     private void androidButton() {
@@ -151,6 +153,20 @@ public class MainActivity extends AppCompatActivity {
     private void progressDialog() {
         binding.progressDialogBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, ProgressDialogActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void webView() {
+        binding.webViewBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, WebViewActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void spinner() {
+        binding.spinnerBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, SpinnerActivity.class);
             startActivity(intent);
         });
     }

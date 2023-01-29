@@ -138,6 +138,20 @@
                 android:layout_height="wrap_content"
                 android:text="ProgressDialog"
                 android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/web_view_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WebView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/spinner_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spinner"
+                android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>
 
