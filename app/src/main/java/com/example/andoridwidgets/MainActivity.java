@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         listView();
         customListView();
         imageSwitcher();
+        imageSlider();
     }
 
     private void androidButton() {
@@ -135,6 +136,13 @@ public class MainActivity extends AppCompatActivity {
     private void imageSwitcher() {
         binding.imageSwitecherBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, ImageSwitcherActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void imageSlider() {
+        binding.sliderBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ImageSliderActivity.class);
             startActivity(intent);
         });
     }
