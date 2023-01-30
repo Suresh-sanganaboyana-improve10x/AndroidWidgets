@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         textWatcher();
         searchOnToolBar();
         autoCompleteTextView();
+        multiAutoCompleteTextView();
     }
 
     private void androidButton() {
@@ -207,6 +208,13 @@ public class MainActivity extends AppCompatActivity {
     private void autoCompleteTextView() {
         binding.autoCompleteBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, AutoCompleteTextViewActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void multiAutoCompleteTextView() {
+        binding.multiAutoCompleteTextBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, MultiAutoCompleteTextVIewActivity.class);
             startActivity(intent);
         });
     }
