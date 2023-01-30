@@ -155,7 +155,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".CheckBoxActivity"
+            android:name=".checkbox.CheckBoxActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
