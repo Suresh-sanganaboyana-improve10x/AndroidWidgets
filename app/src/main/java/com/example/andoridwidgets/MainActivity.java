@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         searchView();
         textWatcher();
         searchOnToolBar();
+        autoCompleteTextView();
     }
 
     private void androidButton() {
@@ -199,6 +200,13 @@ public class MainActivity extends AppCompatActivity {
     private void searchOnToolBar() {
         binding.searchToolBarBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, SearchViewToolBarActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void autoCompleteTextView() {
+        binding.autoCompleteBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, AutoCompleteTextViewActivity.class);
             startActivity(intent);
         });
     }
