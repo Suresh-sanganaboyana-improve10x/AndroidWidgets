@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import com.example.andoridwidgets.checkbox.CheckBoxActivity;
 import com.example.andoridwidgets.databinding.ActivityMainBinding;
+import com.example.andoridwidgets.imageswitcher.ImageSwitcherActivity;
 
 public class MainActivity extends AppCompatActivity {
 
