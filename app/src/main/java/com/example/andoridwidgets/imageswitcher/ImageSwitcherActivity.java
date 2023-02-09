@@ -45,6 +45,7 @@ public class ImageSwitcherActivity extends AppCompatActivity implements ImageSwi
     }
 
     @Override
+
     public void showImageView(int resourceId) {
         binding.imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
             @Override
